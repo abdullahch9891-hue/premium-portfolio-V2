@@ -6,20 +6,26 @@
     <title>CH Abdullah | Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet   ">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>   
 </head>
 
 <body>
-
+ <div id="progress-bar"></div>   
+ <div id="particles-js"></div>   
+<div class="cursor-glow"></div>
 <nav class="navbar">
 
     <div class="logo">
         CH Abdullah
     </div>
-
+<div class="menu-btn">
+    <i class="fas fa-bars"></i>
+</div>
     <ul class="nav-links">
         <a href="#home">Home</a>
        <a href="#about">About</a>
@@ -36,7 +42,7 @@
 
         <h1>CH Abdullah</h1>
 
-        <h2>Web Developer</h2>
+       <h2><span id="typing"></span></h2>
 
         <p>
             I build modern, responsive and user-friendly websites.
@@ -47,6 +53,19 @@
             <a href="#contact" class="btn">Hire Me</a>
             <a href="#" class="btn2">Download CV</a>
         </div>
+       <div class="social-icons">
+    <a href="https://github.com/abdullahch9891-hue" target="_blank">
+    <i class="fab fa-github"></i> GitHub
+</a>
+<div style="margin-bottom:30px;"></div>
+<a href="#" target="_blank">
+    <i class="fab fa-linkedin"></i> LinkedIn
+</a>
+
+<a href="mailto:your@email.com">
+    <i class="fas fa-envelope"></i> Email
+</a>
+</div> 
     </div>
 
     <div class="hero-image">
@@ -71,18 +90,30 @@
     <div class="skills-box">
 
         <div class="skill-card">
-            <h3>HTML</h3>
+            <h3>HTML - 90%</h3>
             <p>Building website structure.</p>
+
+            <div class="progress">
+                <div class="progress-bar html"></div>
+            </div>
         </div>
 
         <div class="skill-card">
-            <h3>CSS</h3>
+            <h3>CSS - 85%</h3>
             <p>Creating beautiful designs.</p>
+
+            <div class="progress">
+                <div class="progress-bar css"></div>
+            </div>
         </div>
 
         <div class="skill-card">
-            <h3>JavaScript</h3>
+            <h3>JavaScript - 70%</h3>
             <p>Currently learning JavaScript.</p>
+
+            <div class="progress">
+                <div class="progress-bar js"></div>
+            </div>
         </div>
 
     </div>
@@ -95,35 +126,60 @@
     <div class="projects-box">
 
         <div class="project-card">
-          <img src="abdullah.jpg" alt="Portfolio Project">  
-            <h3>Portfolio Website</h3>
-            <p>Responsive Portfolio Website using HTML & CSS.</p>
-            <div class="project-buttons">
-    <a href="#" class="btn">Live Demo</a>
-    <a href="#" class="btn2">GitHub</a>
+    <h3>Portfolio Website</h3>
+
+    <p>
+        A modern responsive portfolio website built using
+        HTML, CSS and JavaScript.
+    </p>
+
+    <div class="project-buttons">
+        <a href="#" class="btn">Live Demo</a>
+        <a href="https://github.com/abdullahch9891-hue" target="_blank" class="btn2">GitHub</a>
+    </div>
 </div>
+
+        <div class="project-card">
+            <h3>Coming Soon</h3>
+            <p>More exciting projects will be added soon.</p>
+
+            <a href="#" class="btn">Coming Soon</a>
         </div>
-      
+
     </div>
 
 </section>
+
 <section id="contact" class="contact">
 
     <h2>Contact Me</h2>
+<p>📧 Email: abdullah.ch9891@gmail.com</p>
 
-    <p>Email: chabdullah@example.com</p>
+<p>📱 WhatsApp: +92 3225940024</p>
 
-    <p>WhatsApp: +92 300 1234567</p>
+<p>📍 Location: Faisalabad, Pakistan</p>
 
-    <p>Location: Faisalabad, Pakistan</p>
-113 </section>
+<a href="https://github.com/abdullahch9891-hue" target="_blank" class="btn">
+    💻 GitHub Profile
+</a>
+</p>
+<form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
 
-114 <footer class="footer">
-115     <p>© 2026 CH Abdullah | All Rights Reserved.</p>
-116 </footer>
-<script src="script.js"></script>
-117 </body>
-118 </html>
+    <input type="email" placeholder="Your Email" required>
+
+    <textarea placeholder="Your Message" rows="5" required></textarea>
+
+    <button type="submit" class="btn">Send Message</button>
+</form>
+
+   
 </section>
+
+ <footer class="footer">
+ <p>© 2026 CH Abdullah | All Rights Reserved.</p>
+ </footer>
+
+<script src="script.js?v=2"></script>
 </body>
 </html>
