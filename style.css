@@ -717,18 +717,27 @@ section{
         flex-wrap: wrap;
     }
 
-    .hero-image {
-        width: 100%;
-        justify-content: center;
-        position: relative;
-    }
+   .hero-image {
+    width: 120px !important;
+    height: 120px !important;
+    margin: 0 auto 20px auto !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border: 3px solid #38bdf8 !important;
+    position: relative;
+    order: -1;
+}
 
     .hero-image img {
-    width: 180px !important;
-    height: 180px !important;
+    width: 100% !important;
+    height: 100% !important;
     max-width: none !important;
-    object-fit: cover !important;
-    border-radius: 50% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    border-radius: 0 !important;
     display: block !important;
 }
     .hero-image img:hover {
@@ -736,9 +745,8 @@ section{
     }
 
     .hero-image::before {
-        width: 260px;
-        height: 260px;
-    }
+    display: none !important;
+}
 
     .about,
     .skills,
@@ -769,45 +777,3 @@ section{
         width: 100%;
     }
 }
-/* =========================
-   MOBILE PROFILE PHOTO
-   ========================= */
-@media (max-width: 768px) {
-
-    .hero {
-        display: flex;
-        flex-direction: column;
-    }
-
-   /* MOBILE PROFILE PHOTO */
-@media (max-width: 768px) {
-
-    .hero-image {
-        order: -1;
-        width: 120px;
-        height: 120px;
-        margin: 0 auto 20px auto;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 3px solid #38bdf8;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .hero-image img {
-        width: 100%;
-        height: 100%;
-        max-width: none;
-        display: block;
-        object-fit: contain;
-        object-position: center;
-        border-radius: 0;
-    }
-
-    .hero-image::before {
-        display: none;
-    }
-} 
-}
-
