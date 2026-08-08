@@ -805,4 +805,14 @@ section{
 
 }
 }
-
+@media (max-width: 768px) {
+    .hero-image img {
+        width: 120px !important;
+        height: 120px !important;
+        max-width: none !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        object-position: top center !important;
+        display: block !important;
+    }
+}
