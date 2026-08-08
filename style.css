@@ -803,4 +803,33 @@ section{
         display: none;
     }
 }
+/* FINAL MOBILE PROFILE PHOTO */
+@media (max-width: 768px) {
+
+    .hero-image {
+        order: -1;
+        width: 140px !important;
+        height: 140px !important;
+        margin: 0 auto 20px auto !important;
+        border-radius: 50% !important;
+        overflow: hidden !important;
+        border: 3px solid #38bdf8 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .hero-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+        object-position: center !important;
+        border-radius: 50% !important;
+        display: block !important;
+    }
+
+    .hero-image::before {
+        display: none !important;
+    }
+}
 
