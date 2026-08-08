@@ -816,3 +816,30 @@ section{
         display: block !important;
     }
 }
+@media (max-width: 768px) {
+
+    .hero-image {
+        width: 120px !important;
+        height: 120px !important;
+        margin: 0 auto 20px auto !important;
+        border-radius: 50% !important;
+        overflow: hidden !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        border: 3px solid #38bdf8 !important;
+    }
+
+    .hero-image img {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        object-fit: cover !important;
+        border-radius: 0 !important;
+        display: block !important;
+    }
+
+    .hero-image::before {
+        display: none !important;
+    }
+}
