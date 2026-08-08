@@ -795,10 +795,9 @@ section{
     .hero-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center center;
-    transform: scale(0.88);
-    display: block;
+        display: block;
 }
     .hero-image::before {
         display: none;
