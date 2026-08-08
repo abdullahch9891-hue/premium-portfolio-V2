@@ -721,14 +721,11 @@ section{
     }
 
     .hero-image img {
-        width: 260px;
-        max-width: 80%;
-        height: auto;
-        transform: none;
-        top: auto;
-        right: auto;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
     }
-
     .hero-image img:hover {
         transform: scale(1.03);
     }
@@ -766,4 +763,6 @@ section{
     .contact-form textarea {
         width: 100%;
     }
+    
 }
+
