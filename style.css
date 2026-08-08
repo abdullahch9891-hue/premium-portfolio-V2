@@ -721,11 +721,13 @@ section{
     }
 
     .hero-image img {
-    width: 180px !important;  
-        height: 180px !important;
+    width: 180px !important;
+    height: 180px !important;
+    max-width: none !important;
     object-fit: cover !important;
     border-radius: 50% !important;
-    }
+    display: block !important;
+}
     .hero-image img:hover {
         transform: scale(1.03);
     }
