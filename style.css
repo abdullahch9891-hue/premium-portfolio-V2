@@ -821,33 +821,30 @@ section{
         display: none !important;
     }
 }
-/* =========================
-   MOBILE TEXT SIZE
-   ========================= */
+/* MOBILE SMALLER TEXT */
 @media (max-width: 768px) {
 
     .about h2,
     .skills h2,
     .projects h2,
     .contact h2 {
-        font-size: 38px;
+        font-size: 30px;
     }
 
     .about p {
-        font-size: 18px;
-        line-height: 1.6;
+        font-size: 16px;
+        line-height: 1.5;
     }
 
     .hero-text h1 {
-        font-size: 38px;
+        font-size: 34px;
     }
 
     .hero-text h2 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .hero-text p {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
-
