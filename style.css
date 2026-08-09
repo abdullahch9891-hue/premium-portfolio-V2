@@ -821,30 +821,61 @@ section{
         display: none !important;
     }
 }
-/* MOBILE SMALLER TEXT */
+/* MOBILE TEXT - SMALL */
 @media (max-width: 768px) {
 
     .about h2,
     .skills h2,
     .projects h2,
     .contact h2 {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .about p {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 1.5;
     }
 
     .hero-text h1 {
-        font-size: 34px;
+        font-size: 28px;
     }
 
     .hero-text h2 {
-        font-size: 22px;
+        font-size: 19px;
     }
 
     .hero-text p {
-        font-size: 15px;
+        font-size: 14px;
+    }
+}
+/* MOBILE SKILLS SIZE */
+@media (max-width: 768px) {
+
+    .skills {
+        padding: 40px 5% !important;
+    }
+
+    .skills h2 {
+        font-size: 25px !important;
+        margin-bottom: 25px !important;
+    }
+
+    .skills-box {
+        gap: 15px !important;
+    }
+
+    .skill-card {
+        width: 100% !important;
+        max-width: 280px !important;
+        padding: 18px !important;
+    }
+
+    .skill-card h3 {
+        font-size: 18px !important;
+    }
+
+    .skill-card p {
+        font-size: 13px !important;
+        line-height: 1.4 !important;
     }
 }
