@@ -718,8 +718,8 @@ section{
     }
 
    .hero-image {
-    width: 120px !important;
-    height: 120px !important;
+    width: 150px !important;
+    height: 150px !important;
     margin: 0 auto 20px auto !important;
     border-radius: 50% !important;
     overflow: hidden !important;
@@ -731,13 +731,13 @@ section{
     order: -1;
 }
 
-    .hero-image img {
+   .hero-image img {
     width: 100% !important;
     height: 100% !important;
     max-width: none !important;
-    object-fit: contain !important;
-    object-position: center !important;
-    border-radius: 0 !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    border-radius: 50% !important;
     display: block !important;
 }
     .hero-image img:hover {
