@@ -1,0 +1,217 @@
+/* =========================
+   PREMIUM SERVICES PAGE
+   ========================= */
+
+.services-page {
+    min-height: 100vh;
+    padding: 140px 7% 90px;
+    text-align: center;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.12), transparent 30%),
+        radial-gradient(circle at 85% 70%, rgba(59, 130, 246, 0.12), transparent 30%),
+        #0f172a;
+}
+
+/* Heading */
+
+.services-page h1 {
+    font-size: 52px;
+    color: #38bdf8;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+.services-intro {
+    max-width: 720px;
+    margin: 0 auto 60px;
+    color: #cbd5e1;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* Cards */
+
+.services-container {
+    max-width: 1100px;
+    margin: 0 auto 55px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.service-card {
+    position: relative;
+
+    padding: 32px 25px;
+    min-height: 190px;
+
+    background: rgba(15, 23, 42, 0.72);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 20px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* Card hover */
+
+.service-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 18px 45px rgba(56, 189, 248, 0.18);
+}
+
+/* Card heading */
+
+.service-card h2 {
+    color: #38bdf8;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+/* Card text */
+
+.service-card p {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Hire button */
+
+.hire-button {
+    display: inline-block;
+
+    padding: 15px 38px;
+
+    background: #fbbf24;
+    color: #111827;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 25px rgba(251, 191, 36, 0.18);
+
+    transition: 0.3s ease;
+}
+
+.hire-button:hover {
+    transform: translateY(-4px);
+
+    background: #f59e0b;
+
+    box-shadow:
+        0 12px 30px rgba(251, 191, 36, 0.28);
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .services-page {
+        padding: 110px 5% 65px;
+    }
+
+    .services-page h1 {
+        font-size: 36px;
+    }
+
+    .services-intro {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 38px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        max-width: 310px;
+    }
+
+    .service-card {
+        min-height: 155px;
+        padding: 22px 18px;
+        border-radius: 16px;
+    }
+
+    .service-card h2 {
+        font-size: 18px;
+    }
+
+    .service-card p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .hire-button {
+        padding: 12px 28px;
+        font-size: 15px;
+    }
+}
+/* =========================
+   SERVICES MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .services-page {
+        padding: 100px 20px 60px;
+    }
+
+    .services-page h1 {
+        font-size: 34px;
+    }
+
+    .services-intro {
+        font-size: 14px;
+        margin-bottom: 35px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        gap: 16px;
+    }
+
+    .service-card {
+        padding: 20px 16px;
+        min-height: auto;
+    }
+
+    .service-card h2 {
+        font-size: 18px;
+    }
+
+    .service-card p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .hire-button {
+        font-size: 15px;
+        padding: 12px 28px;
+    }
+}
