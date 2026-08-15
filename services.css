@@ -1,15 +1,14 @@
 /* =========================================================
    PREMIUM SERVICES PAGE
-   Clean + Optimized Version
 ========================================================= */
 
 .services-page {
     position: relative;
     min-height: 100vh;
-    padding: 150px 7% 100px;
+    padding: 145px 7% 80px;
 
     text-align: center;
-    color: #ffffff;
+    color: #fff;
 
     background:
         radial-gradient(
@@ -19,7 +18,7 @@
         ),
         radial-gradient(
             circle at 90% 80%,
-            rgba(99, 102, 241, 0.14),
+            rgba(129, 140, 248, 0.14),
             transparent 30%
         ),
         #020617;
@@ -27,7 +26,40 @@
     overflow: hidden;
 }
 
-/* Keep content above background */
+
+/* =========================================================
+   PARTICLES BACKGROUND
+========================================================= */
+
+#particles-js {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+    pointer-events: none;
+
+    background: transparent;
+}
+
+#particles-js canvas {
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    z-index: 0 !important;
+    pointer-events: none;
+}
+
+
+/* Keep page content above particles */
+
 .services-page > * {
     position: relative;
     z-index: 2;
@@ -35,43 +67,175 @@
 
 
 /* =========================================================
-   PAGE TITLE
+   BACKGROUND GLOW
 ========================================================= */
 
-.services-page h1 {
-    margin-bottom: 18px;
+.services-page::before {
+    content: "";
 
-    font-size: clamp(38px, 5vw, 64px);
-    font-weight: 800;
-    letter-spacing: -1px;
+    position: absolute;
 
-    color: #38bdf8;
+    width: 350px;
+    height: 350px;
 
-    text-shadow:
-        0 0 20px rgba(56, 189, 248, 0.25);
+    top: 100px;
+    left: -140px;
 
-    animation: titleReveal 0.8s ease both;
+    background: radial-gradient(
+        circle,
+        rgba(56, 189, 248, 0.16),
+        transparent 70%
+    );
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    animation: servicesGlowLeft 8s ease-in-out infinite alternate;
+
+    z-index: 1;
+}
+
+.services-page::after {
+    content: "";
+
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    right: -120px;
+    bottom: 100px;
+
+    background: radial-gradient(
+        circle,
+        rgba(129, 140, 248, 0.14),
+        transparent 70%
+    );
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    animation: servicesGlowRight 10s ease-in-out infinite alternate;
+
+    z-index: 1;
 }
 
 
 /* =========================================================
-   INTRO TEXT
+   MY SERVICES HEADING
+========================================================= */
+
+/* =========================
+   PREMIUM GLASS MY SERVICES
+========================= */
+
+.services-page h1 {
+    display: inline-block;
+
+    padding: 14px 32px;
+    margin: 0 auto 25px;
+
+    font-size: clamp(34px, 5vw, 52px);
+    font-weight: 700;
+
+    color: #38bdf8; 
+
+    background: rgba(56, 189, 248, 0.10);
+
+    border: 1px solid rgba(56, 189, 248, 0.45);
+    border-radius: 18px;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 8px 30px rgba(56, 189, 248, 0.15),
+        inset 0 1px 1px rgba(255, 255, 255, 0.18),
+        0 0 25px rgba(56, 189, 248, 0.12);
+
+    text-shadow:
+        0 0 15px rgba(
+            56, 189, 248, 0.55);
+        margin-bottom: 35px !important;
+    position: relative;
+    z-index: 3;
+
+    animation: titleGlassReveal 0.8s ease both;
+}
+
+/* Cyan premium glow */
+
+.services-page h1::before {
+    content: "";
+
+    position: absolute;
+    inset: -1px;
+
+    border-radius: 22px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(56, 189, 248, 0.5),
+        transparent 40%,
+        rgba(129, 140, 248, 0.5)
+    );
+
+    opacity: 0.25;
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+/* Hover effect */
+
+.services-page h1:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(56, 189, 248, 0.55);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(56, 189, 248, 0.18),
+        inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+/* Heading animation */
+
+@keyframes titleGlassReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   SERVICES INTRO
 ========================================================= */
 
 .services-intro {
+    width: 100%;
     max-width: 750px;
+
     margin: 0 auto 65px;
+
+    text-align: center !important;
 
     color: #cbd5e1;
 
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.8;
-    font-weight: 400;
 
-    text-shadow:
-        0 1px 8px rgba(0, 0, 0, 0.35);
-
-    animation: fadeUp 0.8s ease 0.15s both;
+    animation: fadeUp 0.9s ease 0.15s both;
 }
 
 
@@ -80,11 +244,18 @@
 ========================================================= */
 
 .services-container {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
     max-width: 1150px;
-    margin: 0 auto 65px;
+
+    margin: 0 auto 55px;
 
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 28px;
 }
 
@@ -96,24 +267,29 @@
 .service-card {
     position: relative;
 
-    min-height: 230px;
+    min-height: 235px;
+
     padding: 38px 28px;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
-    background: rgba(15, 23, 42, 0.72);
+    text-align: center;
 
-    border: 1px solid rgba(56, 189, 248, 0.22);
+    background: rgba(15, 23, 42, 0.70);
+
+    border: 1px solid rgba(56, 189, 248, 0.20);
+
     border-radius: 24px;
 
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
     box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.30);
+        0 15px 40px rgba(0, 0, 0, 0.28),
+        inset 0 1px 1px rgba(255, 255, 255, 0.04);
 
     overflow: hidden;
 
@@ -129,7 +305,9 @@
 }
 
 
-/* Top glowing line */
+/* =========================================================
+   CARD TOP GLOW LINE
+========================================================= */
 
 .service-card::before {
     content: "";
@@ -152,13 +330,19 @@
     );
 
     box-shadow:
-        0 0 15px rgba(56, 189, 248, 0.8);
+        0 0 12px rgba(56, 189, 248, 0.8);
 
-    transition: width 0.45s ease;
+    transition: width 0.4s ease;
+}
+
+.service-card:hover::before {
+    width: 75%;
 }
 
 
-/* Soft card glow */
+/* =========================================================
+   CARD LIGHT
+========================================================= */
 
 .service-card::after {
     content: "";
@@ -180,8 +364,11 @@
     transition:
         transform 0.5s ease,
         opacity 0.5s ease;
+}
 
-    pointer-events: none;
+.service-card:hover::after {
+    transform: scale(2);
+    opacity: 0.13;
 }
 
 
@@ -196,21 +383,11 @@
 
     background: rgba(56, 189, 248, 0.10);
 
-    border-color:
-        rgba(56, 189, 248, 0.75);
+    border-color: rgba(56, 189, 248, 0.75);
 
     box-shadow:
         0 25px 60px rgba(0, 0, 0, 0.35),
-        0 0 30px rgba(56, 189, 248, 0.14);
-}
-
-.service-card:hover::before {
-    width: 75%;
-}
-
-.service-card:hover::after {
-    transform: scale(2);
-    opacity: 0.13;
+        0 0 30px rgba(56, 189, 248, 0.13);
 }
 
 
@@ -222,9 +399,9 @@
     position: relative;
     z-index: 2;
 
-    margin-bottom: 20px;
-
     font-size: 40px;
+
+    margin-bottom: 20px;
 
     color: #38bdf8;
 
@@ -240,7 +417,7 @@
 .service-card:hover i {
     transform:
         translateZ(18px)
-        translateY(-4px)
+        translateY(-5px)
         scale(1.12);
 
     color: #7dd3fc;
@@ -260,167 +437,201 @@
 
     margin-bottom: 14px;
 
-    color: #f8fafc;
+    color: #fff;
 
     font-size: 21px;
-    font-weight: 700;
+    font-weight: 600;
 
-    letter-spacing: 0.3px;
     line-height: 1.3;
 
-    text-shadow:
-        0 0 12px rgba(56, 189, 248, 0.18);
+    letter-spacing: 0.3px;
 
-    transition:
-        transform 0.35s ease,
-        color 0.35s ease;
+    text-shadow:
+        0 0 10px rgba(56, 189, 248, 0.12);
+
+    transition: transform 0.35s ease;
 }
 
 .service-card:hover h2 {
     transform: translateZ(10px);
-    color: #ffffff;
 }
 
 
 /* =========================================================
    SERVICE DESCRIPTION
-   Premium white/blue-gray text
 ========================================================= */
 
 .service-card p {
     position: relative;
     z-index: 2;
 
-    max-width: 280px;
+    max-width: 285px;
+
     margin: 0 auto;
 
-    color: #dbeafe;
+    color: #cbd5e1;
 
     font-size: 15px;
-    font-weight: 400;
 
-    line-height: 1.75;
-    letter-spacing: 0.15px;
+    line-height: 1.7;
 
-    text-align: center;
-
-    text-shadow:
-        0 1px 8px rgba(0, 0, 0, 0.35);
-
-    transition:
-        transform 0.35s ease,
-        color 0.35s ease;
+    transition: transform 0.35s ease;
 }
 
 .service-card:hover p {
     transform: translateZ(6px);
-
-    color: #f8fafc;
 }
 
 
-
-/* =========================
-   FORCE PREMIUM GLASS HIRE BUTTON
-========================= */
-
-a.hire-button {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    padding: 17px 48px !important;
-    min-width: 180px !important;
-
-    background: rgba(15, 23, 42, 0.45) !important;
-    background-color: rgba(15, 23, 42, 0.45) !important;
-
-    color: #e0f2fe !important;
-
-    border: 1px solid rgba(125, 211, 252, 0.7) !important;
-    border-radius: 50px !important;
-
-    backdrop-filter: blur(15px) !important;
-    -webkit-backdrop-filter: blur(15px) !important;
-
-    box-shadow:
-        inset 0 1px 2px rgba(255, 255, 255, 0.25),
-        0 8px 25px rgba(0, 0, 0, 0.35),
-        0 0 20px rgba(56, 189, 248, 0.15) !important;
-
-    text-decoration: none !important;
-
-    transition: all 0.35s ease !important;
-}
-
-a.hire-button:hover {
-    background: rgba(56, 189, 248, 0.12) !important;
-    background-color: rgba(56, 189, 248, 0.12) !important;
-
-    color: #ffffff !important;
-
-    border-color: #7dd3fc !important;
-
-    transform: translateY(-4px) !important;
-
-    box-shadow:
-        0 12px 35px rgba(56, 189, 248, 0.25),
-        0 0 25px rgba(56, 189, 248, 0.2) !important;
-}
 /* =========================================================
-   WHY CHOOSE ME
+   CARD ANIMATION DELAYS
+========================================================= */
+
+.service-card:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.service-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.service-card:nth-child(3) {
+    animation-delay: 0.35s;
+}
+
+.service-card:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+.service-card:nth-child(5) {
+    animation-delay: 0.55s;
+}
+
+.service-card:nth-child(6) {
+    animation-delay: 0.65s;
+}
+
+
+/* =========================================================
+   GLASS HIRE ME BUTTON
+========================================================= */
+
+.hire-button {
+    position: relative;
+    z-index: 5;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 190px;
+
+    margin: 5px auto 0;
+
+    padding: 15px 38px;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    border-radius: 50px;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.20);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.hire-button:hover {
+    color: #fff;
+
+    background: rgba(56, 189, 248, 0.16);
+
+    border-color: rgba(56, 189, 248, 0.75);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 35px rgba(56, 189, 248, 0.22),
+        inset 0 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================================================
+   WHY CHOOSE ME - COMPACT
 ========================================================= */
 
 .why-me {
-    max-width: 1100px;
+    position: relative;
+    z-index: 3;
 
-    margin: 100px auto 20px;
-    padding: 70px 30px;
+    width: 100%;
+    max-width: 900px;
+
+    margin: 70px auto 10px;
+
+    padding: 42px 25px;
 
     text-align: center;
 
     background: rgba(15, 23, 42, 0.55);
 
-    border: 1px solid rgba(56, 189, 248, 0.15);
+    border: 1px solid rgba(56, 189, 248, 0.14);
 
-    border-radius: 28px;
+    border-radius: 22px;
 
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
 
     box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.22);
+        0 15px 40px rgba(0, 0, 0, 0.20);
 
-    animation: smoothReveal 0.8s ease 0.9s both;
+    animation: fadeUp 0.9s ease 0.8s both;
 }
 
 
 /* Why heading */
 
 .why-me h2 {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 
     color: #38bdf8;
 
-    font-size: 38px;
-    font-weight: 800;
-
-    text-shadow:
-        0 0 18px rgba(56, 189, 248, 0.22);
+    font-size: 30px;
+    font-weight: 700;
 }
 
 
 /* Why intro */
 
 .why-intro {
-    max-width: 700px;
+    max-width: 620px;
 
-    margin: 0 auto 45px;
+    margin: 0 auto 30px;
 
-    color: #cbd5e1;
+    color: #94a3b8;
 
-    font-size: 17px;
-    line-height: 1.7;
+    font-size: 14px;
+
+    line-height: 1.6;
 }
 
 
@@ -431,17 +642,17 @@ a.hire-button:hover {
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 25px;
+    gap: 16px;
 }
 
 .why-card {
-    padding: 30px 20px;
+    padding: 22px 15px;
 
-    background: rgba(30, 41, 59, 0.55);
+    background: rgba(30, 41, 59, 0.50);
 
-    border: 1px solid rgba(56, 189, 248, 0.15);
+    border: 1px solid rgba(56, 189, 248, 0.13);
 
-    border-radius: 20px;
+    border-radius: 17px;
 
     transition:
         transform 0.35s ease,
@@ -450,144 +661,45 @@ a.hire-button:hover {
 }
 
 .why-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
 
-    border-color: rgba(56, 189, 248, 0.75);
+    border-color: rgba(56, 189, 248, 0.65);
 
     box-shadow:
-        0 15px 35px rgba(56, 189, 248, 0.12);
+        0 12px 28px rgba(56, 189, 248, 0.12);
 }
 
 
 /* Why icons */
 
 .why-card i {
-    margin-bottom: 18px;
+    font-size: 28px;
 
-    font-size: 35px;
+    margin-bottom: 12px;
 
     color: #38bdf8;
-
-    text-shadow:
-        0 0 15px rgba(56, 189, 248, 0.45);
 }
 
 
 /* Why title */
 
 .why-card h3 {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 
-    color: #f8fafc;
+    color: #fff;
 
-    font-size: 20px;
+    font-size: 17px;
 }
 
 
 /* Why text */
 
 .why-card p {
-    color: #cbd5e1;
+    color: #94a3b8;
 
-    font-size: 15px;
+    font-size: 13px;
 
-    line-height: 1.6;
-}
-
-
-/* =========================================================
-   PARTICLES.JS
-========================================================= */
-
-#particles-js {
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    z-index: 0;
-
-    pointer-events: none;
-
-    background: transparent;
-}
-
-#particles-js canvas {
-    position: fixed !important;
-
-    top: 0 !important;
-    left: 0 !important;
-
-    width: 100% !important;
-    height: 100% !important;
-
-    z-index: 0 !important;
-
-    pointer-events: none;
-}
-
-
-/* Navbar above particles */
-
-.navbar {
-    position: relative;
-    z-index: 10;
-
-    background: rgba(15, 23, 42, 0.65);
-
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    border-bottom:
-        1px solid rgba(56, 189, 248, 0.12);
-
-    box-shadow:
-        0 8px 30px rgba(0, 0, 0, 0.18);
-}
-
-.nav-links a {
-    transition:
-        color 0.3s ease,
-        text-shadow 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #38bdf8;
-
-    text-shadow:
-        0 0 12px rgba(56, 189, 248, 0.6);
-}
-
-
-/* =========================================================
-   CARD ANIMATION DELAYS
-========================================================= */
-
-.service-card:nth-child(1) {
-    animation-delay: 0.20s;
-}
-
-.service-card:nth-child(2) {
-    animation-delay: 0.30s;
-}
-
-.service-card:nth-child(3) {
-    animation-delay: 0.40s;
-}
-
-.service-card:nth-child(4) {
-    animation-delay: 0.50s;
-}
-
-.service-card:nth-child(5) {
-    animation-delay: 0.60s;
-}
-
-.service-card:nth-child(6) {
-    animation-delay: 0.70s;
+    line-height: 1.5;
 }
 
 
@@ -596,6 +708,7 @@ a.hire-button:hover {
 ========================================================= */
 
 @keyframes titleReveal {
+
     from {
         opacity: 0;
         transform: translateY(25px);
@@ -609,6 +722,7 @@ a.hire-button:hover {
 
 
 @keyframes fadeUp {
+
     from {
         opacity: 0;
         transform: translateY(25px);
@@ -622,6 +736,7 @@ a.hire-button:hover {
 
 
 @keyframes cardReveal {
+
     from {
         opacity: 0;
         transform: translateY(35px);
@@ -634,15 +749,30 @@ a.hire-button:hover {
 }
 
 
-@keyframes smoothReveal {
+@keyframes servicesGlowLeft {
+
     from {
-        opacity: 0;
-        transform: translateY(25px);
+        transform: translateY(0);
+        opacity: 0.5;
     }
 
     to {
+        transform: translateY(45px);
         opacity: 1;
+    }
+}
+
+
+@keyframes servicesGlowRight {
+
+    from {
         transform: translateY(0);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateY(-40px);
+        opacity: 1;
     }
 }
 
@@ -658,7 +788,7 @@ a.hire-button:hover {
     }
 
     .why-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -670,124 +800,183 @@ a.hire-button:hover {
 @media (max-width: 600px) {
 
     .services-page {
-        padding: 120px 20px 70px;
+        padding: 115px 20px 60px;
     }
+
 
     .services-page h1 {
         font-size: 38px;
+
+        margin-bottom: 18px;
     }
 
+
     .services-intro {
-        font-size: 15px;
-        margin-bottom: 40px;
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        margin-bottom: 45px;
     }
+
 
     .services-container {
         grid-template-columns: 1fr;
+
         max-width: 360px;
+
+        gap: 18px;
+
+        margin-bottom: 40px;
     }
 
+
     .service-card {
-        min-height: 200px;
+        min-height: 205px;
+
         padding: 30px 22px;
+
+        border-radius: 21px;
     }
+
+
+    .service-card i {
+        font-size: 34px;
+
+        margin-bottom: 15px;
+    }
+
 
     .service-card h2 {
         font-size: 19px;
     }
 
+
     .service-card p {
-        font-size: 14px;
+        font-size: 13px;
+
+        max-width: 280px;
     }
+
 
     .hire-button {
-        width: 100%;
-        max-width: 300px;
+        min-width: 175px;
+
+        padding: 13px 30px;
+
+        font-size: 15px;
     }
+
+
+    /* Compact Why Choose Me */
 
     .why-me {
-        margin-top: 70px;
-        padding: 50px 20px;
+        max-width: 360px;
+
+        margin-top: 55px;
+
+        padding: 32px 16px;
+
+        border-radius: 20px;
     }
 
+
     .why-me h2 {
-        font-size: 30px;
+        font-size: 25px;
+
+        margin-bottom: 8px;
     }
+
+
+    .why-intro {
+        font-size: 13px;
+
+        margin-bottom: 25px;
+    }
+
 
     .why-container {
         grid-template-columns: 1fr;
-        gap: 18px;
+
+        gap: 12px;
     }
+
+
+    .why-card {
+        padding: 18px 14px;
+    }
+
+
+    .why-card i {
+        font-size: 25px;
+
+        margin-bottom: 8px;
+    }
+
+
+    .why-card h3 {
+        font-size: 16px;
+    }
+
 
     .why-card p {
-        font-size: 14px;
+        font-size: 12px;
+    }
+
+
+    .services-page::before {
+        width: 250px;
+        height: 250px;
+
+        left: -130px;
+    }
+
+
+    .services-page::after {
+        width: 230px;
+        height: 230px;
+
+        right: -120px;
     }
 }
-/* =========================
-   PREMIUM GLASS SERVICES TITLE
-========================= */
 
-.services-page h1 {
-    display: inline-block;
 
-    padding: 22px 55px;
-    margin-bottom: 25px;
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
 
-    font-size: clamp(38px, 5vw, 62px);
-    font-weight: 800;
-    letter-spacing: 1px;
+@media (max-width: 380px) {
 
-    color: #e0f2fe;
+    .services-page {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
-    background: rgba(255, 255, 255, 0.06);
-
-    border: 1px solid rgba(125, 211, 252, 0.55);
-    border-radius: 28px;
-
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-
-    box-shadow:
-        inset 0 1px 2px rgba(255, 255, 255, 0.25),
-        0 10px 35px rgba(0, 0, 0, 0.3),
-        0 0 25px rgba(56, 189, 248, 0.12);
-
-    text-shadow:
-        0 0 10px rgba(56, 189, 248, 0.35);
-
-    transition: 0.4s ease;
-}
-
-.services-page h1:hover {
-    transform: translateY(-4px);
-
-    border-color: rgba(125, 211, 252, 0.9);
-
-    background: rgba(56, 189, 248, 0.10);
-
-    box-shadow:
-        0 15px 45px rgba(56, 189, 248, 0.18),
-        0 0 30px rgba(56, 189, 248, 0.18);
-}
-@media (max-width: 600px) {
     .services-page h1 {
-        padding: 16px 28px;
-        font-size: 38px;
-        border-radius: 22px;
+        font-size: 34px;
+    }
+
+    .service-card {
+        padding: 27px 18px;
+    }
+
+    .why-me {
+        padding-left: 13px;
+        padding-right: 13px;
     }
 }
-/* =========================
-   SPACE BETWEEN TITLE & CARDS
-========================= */
+/* =================================
+   MY SERVICES → CARDS SPACING
+================================= */
 
 .services-page h1 {
-    margin-bottom: 100px !important;
+    margin-bottom: 50px !important;
+}
+
+.services-intro {
+    margin-bottom: 55px !important;
 }
 
 .services-container {
-    margin-top: 0;
-}
-/* Move Hire Me button slightly down */
-.hire-button {
-    margin-top: 60px;
+    margin-top: 15px !important;
 }
