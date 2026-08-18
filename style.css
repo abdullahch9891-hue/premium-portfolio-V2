@@ -1246,3 +1246,46 @@ section {
         max-width: 200px;
     }
 }
+/* =========================
+   SERVICES MOBILE FIX
+========================= */
+
+@media (max-width: 768px) {
+
+    .services-page {
+        display: block !important;
+        width: 100% !important;
+        min-height: 100vh !important;
+        padding: 110px 20px 60px !important;
+        text-align: center !important;
+        overflow: hidden !important;
+    }
+
+    .services-page h1 {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+
+        position: relative !important;
+        z-index: 10 !important;
+
+        font-size: 32px !important;
+        margin: 0 auto 35px !important;
+    }
+
+    .services-intro {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+
+        margin: 0 auto 40px !important;
+    }
+
+    .services-container {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        max-width: 360px !important;
+        margin: 0 auto 45px !important;
+    }
+}
