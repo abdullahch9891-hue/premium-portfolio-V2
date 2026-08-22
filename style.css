@@ -1246,46 +1246,66 @@ section {
         max-width: 200px;
     }
 }
-/* =========================
-   SERVICES MOBILE FIX
-========================= */
+/* =========================================================
+   MOBILE NAVIGATION FIX
+========================================================= */
 
 @media (max-width: 768px) {
 
-    .services-page {
+    .menu-btn {
         display: block !important;
-        width: 100% !important;
-        min-height: 100vh !important;
-        padding: 110px 20px 60px !important;
-        text-align: center !important;
-        overflow: hidden !important;
+        font-size: 28px;
+        cursor: pointer;
+        color: #ffffff;
+        z-index: 1100;
     }
 
-    .services-page h1 {
-        display: inline-block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
 
-        position: relative !important;
-        z-index: 10 !important;
+        position: absolute;
+        top: 70px;
+        right: 20px;
 
-        font-size: 32px !important;
-        margin: 0 auto 35px !important;
+        width: 190px;
+        padding: 20px;
+
+        gap: 15px;
+
+        background: rgba(15, 23, 42, 0.96);
+
+        border: 1px solid rgba(56, 189, 248, 0.35);
+        border-radius: 16px;
+
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        box-shadow:
+            0 15px 40px rgba(0, 0, 0, 0.4),
+            0 0 25px rgba(56, 189, 248, 0.12);
+
+        z-index: 1000;
     }
 
-    .services-intro {
+    .nav-links.show-menu {
+        display: flex !important;
+    }
+
+    .nav-links a {
         display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
+        width: 100%;
 
-        margin: 0 auto 40px !important;
+        color: #ffffff;
+        text-decoration: none;
+
+        padding: 8px 5px;
+
+        font-size: 15px;
     }
 
-    .services-container {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        width: 100% !important;
-        max-width: 360px !important;
-        margin: 0 auto 45px !important;
+    .nav-links a:hover {
+        color: #38bdf8;
     }
 }
