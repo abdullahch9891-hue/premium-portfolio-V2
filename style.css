@@ -1356,32 +1356,74 @@ section {
         color: #38bdf8 !important;
     }
 }
-/* =========================================================
-   MOBILE MENU - SERVICES FIX
-========================================================= */
+/* ===== FINAL MOBILE NAVIGATION ===== */
 
 @media (max-width: 768px) {
 
+    .navbar {
+        position: relative;
+    }
+
+    .menu-btn {
+        display: block !important;
+        font-size: 28px;
+        cursor: pointer;
+        color: #ffffff;
+        z-index: 9999;
+    }
+
+    .nav-links {
+        display: none !important;
+
+        position: absolute;
+        top: 70px;
+        right: 15px;
+
+        width: 210px;
+        padding: 15px;
+
+        margin: 0;
+        gap: 5px;
+
+        flex-direction: column;
+
+        background: rgba(15, 23, 42, 0.98);
+
+        border: 1px solid rgba(56, 189, 248, 0.45);
+        border-radius: 16px;
+
+        box-shadow:
+            0 15px 40px rgba(0, 0, 0, 0.45),
+            0 0 25px rgba(56, 189, 248, 0.15);
+
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        z-index: 9998;
+    }
+
     .nav-links.show-menu {
         display: flex !important;
-        flex-direction: column !important;
-        gap: 0 !important;
     }
 
-    .nav-links.show-menu a {
+    .nav-links a {
         display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        height: auto !important;
-        width: 100% !important;
-        padding: 14px 0 !important;
-        margin: 0 !important;
+
+        width: 100%;
+
+        padding: 12px 8px;
+
+        color: #ffffff;
+
+        text-decoration: none;
+
+        font-size: 16px;
+
+        border-radius: 8px;
     }
 
-    /* Specifically force Services to appear */
-    .nav-links.show-menu a[href="services.html"] {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
+    .nav-links a:hover {
+        color: #38bdf8;
+        background: rgba(56, 189, 248, 0.08);
     }
 }
