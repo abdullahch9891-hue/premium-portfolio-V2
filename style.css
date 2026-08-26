@@ -1356,20 +1356,19 @@ section {
         color: #38bdf8 !important;
     }
 }
-/* ===== FINAL MOBILE NAVIGATION ===== */
+/* =========================================================
+   FINAL MOBILE NAVIGATION
+========================================================= */
 
 @media (max-width: 768px) {
 
-    .navbar {
-        position: relative;
-    }
-
     .menu-btn {
         display: block !important;
-        font-size: 28px;
-        cursor: pointer;
+        position: relative;
+        z-index: 1101;
+        font-size: 30px;
         color: #ffffff;
-        z-index: 9999;
+        cursor: pointer;
     }
 
     .nav-links {
@@ -1377,29 +1376,31 @@ section {
 
         position: absolute;
         top: 70px;
-        right: 15px;
+        right: 20px;
 
         width: 210px;
-        padding: 15px;
-
-        margin: 0;
-        gap: 5px;
 
         flex-direction: column;
+        align-items: flex-start;
 
-        background: rgba(15, 23, 42, 0.98);
+        gap: 5px;
+
+        padding: 18px;
+
+        background: rgba(15, 23, 42, 0.97);
 
         border: 1px solid rgba(56, 189, 248, 0.45);
-        border-radius: 16px;
+
+        border-radius: 18px;
+
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
 
         box-shadow:
-            0 15px 40px rgba(0, 0, 0, 0.45),
-            0 0 25px rgba(56, 189, 248, 0.15);
+            0 20px 50px rgba(0, 0, 0, 0.45),
+            0 0 30px rgba(56, 189, 248, 0.12);
 
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
-
-        z-index: 9998;
+        z-index: 1100;
     }
 
     .nav-links.show-menu {
@@ -1411,19 +1412,27 @@ section {
 
         width: 100%;
 
-        padding: 12px 8px;
+        padding: 12px 10px;
 
-        color: #ffffff;
+        color: #ffffff !important;
 
         text-decoration: none;
 
         font-size: 16px;
 
-        border-radius: 8px;
+        border-radius: 10px;
+
+        transition:
+            background 0.25s ease,
+            color 0.25s ease,
+            transform 0.25s ease;
     }
 
     .nav-links a:hover {
-        color: #38bdf8;
+        color: #38bdf8 !important;
+
         background: rgba(56, 189, 248, 0.08);
+
+        transform: translateX(4px);
     }
 }
