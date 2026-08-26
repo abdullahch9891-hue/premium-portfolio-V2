@@ -145,18 +145,10 @@ skillBars.forEach((bar) => {
     skillsObserver.observe(bar);
 });
 const menuBtn = document.querySelector(".menu-btn");
-const navLinks = document.querySelector(".nav-links");
 
-if (menuBtn && navLinks) {
-
-    menuBtn.addEventListener("click", function () {
-        navLinks.classList.toggle("show-menu");
-    });
-
-    navLinks.querySelectorAll("a").forEach(function (link) {
-        link.addEventListener("click", function () {
-            navLinks.classList.remove("show-menu");
-        });
+if (menuBtn) {
+    menuBtn.addEventListener("click", () => {
+        document.querySelector(".nav-links").classList.toggle("show-menu");
     });
 }
  // =========================
