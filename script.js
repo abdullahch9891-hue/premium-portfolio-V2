@@ -15,10 +15,11 @@ hiddenElements.forEach((el) => {
 });
 const texts = [
     "Web Developer",
-    "Frontend Developer",
-    "HTML & CSS Expert"
+    "HTML & CSS Expert",
+    "Graphic Designer",
+    "Virtual Assistant",
+    "Frontend Developer"
 ];
-
 const typing = document.getElementById("typing");
 
 if (typing) {

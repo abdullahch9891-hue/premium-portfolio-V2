@@ -1822,3 +1822,18 @@
         font-size: 11px;
     }
 }
+@media (min-width: 1001px) {
+    .services-container .service-card:nth-child(9) {
+        grid-column: 2;
+    }
+
+    .services-container .service-card:nth-child(10) {
+        grid-column: 3;
+    }
+}
+
+.services-page > .hire-button {
+    display: flex;
+    width: max-content;
+    margin: 0 auto 60px;
+}

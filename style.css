@@ -623,6 +623,13 @@ section {
 .progress-bar.js {
     width: 60%;
 }
+.progress-bar.va {
+    width: 80%;
+}
+
+.progress-bar.graphic {
+    width: 75%;
+}
 
 /* =========================================================
    PROJECTS
